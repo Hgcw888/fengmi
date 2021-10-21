@@ -13,4 +13,5 @@ public interface UsersService {
     ResultVo checkLogin(String username, String password);
 
     ResultVo usersResgit(String username, String password);
+
 }

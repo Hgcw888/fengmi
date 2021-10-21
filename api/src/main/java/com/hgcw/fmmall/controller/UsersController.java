@@ -1,5 +1,6 @@
 package com.hgcw.fmmall.controller;
 
+import com.hgcw.fmmall.entity.Users;
 import com.hgcw.fmmall.service.UsersService;
 import com.hgcw.fmmall.vo.ResultVo;
 import io.swagger.annotations.*;
@@ -48,19 +49,26 @@ public class UsersController {
             @ApiImplicitParam(dataType = "String", name = "username", value = "用户注册账号", required = true),
             @ApiImplicitParam(dataType = "String", name = "password", value = "用户注册密码", required = true),
     })
-    @PostMapping("/resgit/{username}/{password}")
-    public ResultVo resgit(@PathVariable("username") String username, @PathVariable("password") String password) {
-        ResultVo resultVo = usersService.usersResgit(username, password);
+    @PostMapping("/resgit")
+    public ResultVo resgit(@RequestBody Users users) {
+        ResultVo resultVo = usersService.usersResgit(users.getUsername(), users.getPassword());
         return resultVo;
     }
 
-
-//    //`@ApiIgnore`接口方法注解，添加此注解的方法将不会生成到接口文档中
-//    @ApiIgnore
-//    @ApiOperation("用户登录接口")
-//    @GetMapping("/selcet")
-//    public List<Users> select() {
-//        List<Users> users = usersService.selectList();
-//        return users;
+//    /**
+//     * 注册
+//     *
+//     * @return
+//     */
+//    @ApiOperation("用户注册接口")
+//    @ApiImplicitParams({
+//            @ApiImplicitParam(dataType = "String", name = "username", value = "用户注册账号", required = true),
+//            @ApiImplicitParam(dataType = "String", name = "password", value = "用户注册密码", required = true),
+//    })
+//    @PostMapping("/resgit/{username}/{password}")
+//    public ResultVo resgit(@PathVariable("username") String username, @PathVariable("password") String password) {
+//        ResultVo resultVo = usersService.usersResgit(username, password);
+//        return resultVo;
 //    }
+
 }

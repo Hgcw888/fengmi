@@ -243,4 +243,20 @@ public class IndexImg {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+    @Override
+    public String toString() {
+        return "IndexImg{" +
+                "imgId='" + imgId + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", imgBgColor='" + imgBgColor + '\'' +
+                ", prodId='" + prodId + '\'' +
+                ", categoryId='" + categoryId + '\'' +
+                ", indexType=" + indexType +
+                ", seq=" + seq +
+                ", status=" + status +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }

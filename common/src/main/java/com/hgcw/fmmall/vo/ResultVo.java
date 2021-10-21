@@ -24,5 +24,5 @@ public class ResultVo {
     private String msg;
     //响应的状态数据
     @ApiModelProperty(value ="响应的状态数据",required = true)
-    private Object date;
+    private Object data;
 }

@@ -13,6 +13,17 @@
     <artifactId>service</artifactId>
 <!--    依赖到common，mapper文件-->
     <dependencies>
+<!--        jwt依赖-->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
         <dependency>
             <groupId>com.hgcw</groupId>
             <artifactId>common</artifactId>
